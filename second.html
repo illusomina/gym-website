@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html>
+    <head><title>Welcome to Mina Fitness!</title>
+        <link rel="stylesheet" href="./css/second.css"></head>
+    <body>
+        <div id = "nav">
+            <div id = "brand">
+                <h1>Mina Fitness</h1>
+            </div>
+            <div id ="links">
+                <a href="index.html">Home</a>
+                <a href="second.html">Contact us</a>
+                <a href="third.html" id="last">Validation</a>
+            </div>
+        </div>
+        <h3 style="text-align:center;">Programs</h3><!--programs Price-->
+        <div id="container">
+            <div id="program">
+                <h3>Pilates</h3>
+                <h3>35$/session</h3>
+                <div>
+                    <ul>
+                        <li>Balance of all opposing muscles</li>
+                        <li>Full body's alignment</li>
+                        <li>Ideal range of motion</li>
+                    </ul>
+                </div>
+            </div>
+            <div id="program">
+                <h3>Flying Yoga</h3>
+                <h3>40$/session</h3>
+                <div>
+                    <ul>
+                        <li>Promote circulation</li>
+                        <li>Improving flexibility</li>
+                        <li>Boost confidence and mood</li>
+                    </ul>
+                </div>
+            </div>
+            <div id="program">
+                <h3>Zumba</h3>
+                <h3>30$/session</h3>
+                <div>
+                    <ul>
+                        <li>Build anaerobic endurance</li>
+                        <li>Improve your coordination</li>
+                        <li>Burn calories and blast away fat</li>
+                    </ul>
+                </div>
+            </div>
+
+        </div>
+        <br>
+        <br>
+        <br>
+        <br>
+     
+        <table id="info">
+            <tr>
+                <td><h2>What's on your mind?</h2><br>
+                    <p>Send us any question or comment, <br>
+                     and we will get back to you as soon as possible.</p>
+                    <p>Address: 147-74 Northern Blvd<br>
+                    Phone: 347-738-0586</p></td>
+                <td><img src="./img/applynow.jpeg" alt="contactus"></td>
+                <!--Image source non copy-->
+                <!--https://www.pexels.com/photo/three-woman-in-assorted-color-sport-bras-holding-and-watching-their-smartphones-905336/-->
+                </tr>
+                </table>
+                <br>
+                <br>
+               
+        
+                <!--Form starts-->
+        <div id="section">   
+            <div id="left">    
+                <form name = "Application">
+                    <h3>Application</h3>
+                    <p>
+                        Last Name: &nbsp;<input name="Application" size="20" type="text" maxlength="10"><br>
+                        First Name: &nbsp;<input name="Application" size="30" type="text" maxlength="10"><br>
+                        Address:&nbsp;<input name="Application" size="40" type="text" maxlength="20"><br>
+                        City: &nbsp;<input name="Application" size="20" type="text" maxlength="12">
+                        &nbsp;State: <input name="state" size="3" type="TEXT" maxlength="2"> 
+                        &nbsp; Zip: <input name="zip" size="5" type="text" maxlength="5"><br>
+                        Phone: &nbsp;<input name="phone" size="30" type="text" maxlength="10"><br>
+                    </p>
+                    <p>
+                        <h4>Select your Age</h4>
+                        <input name= "age" type="radio">18-26
+                        <input name= "age" type="radio">27-34
+                        <input name= "age" type="radio">35-42
+                        <input name= "age" type="radio">43-50 and more<br>
+                        
+                    </p>
+                    <p>
+                        <h4>Select Course</h4>
+                        <select name="course" type="text">
+                            <option value="Pilates">Pilates</option>
+                            <option value="FlyingYoga">Flying Yoga</option>
+                            <option value="Zumba">Zumba</option>
+                         </select> 
+                    </p>
+                    <p>
+                        <h4>What would you like to improve?</h4>
+                        <input name="reach" type="checkbox">Posture
+                        <input name="reach" type="checkbox">Cardio
+                        <input name="reach" type="checkbox">Flexibility<br>
+                        <input name="reach" type="checkbox">Diet
+                        <input name="reach" type="checkbox">Coordination
+                        <input name="reach" type="checkbox">Other<br>
+                    </p>
+                    <p>Comment:</p>
+                    <textarea name="" id="" cols="30" rows="10" ></textarea>
+                    <br>
+                    <input type="button" id="btn" value="submit">
+                    <input type="button" id="btn" value="Clear">
+                </form>
+            </div> 
+            <!--second form-->
+            <div id="right">
+                <form name = "Payment">
+                    <h3>Payment</h3>
+                    <p>
+                        Name: &nbsp;&nbsp;&nbsp;<input name="payment" type="text" size="25" maxlength="20"><br>
+                        Card Number: &nbsp;&nbsp;&nbsp;<input name="payment" size="20" type="text" maxlength="16"><br>
+                        Expiration Date: &nbsp;&nbsp;&nbsp;<input name="payment" size="4" type="text" maxlength="5">
+                        &nbsp;&nbsp;&nbsp;CVV: <input name="payment" size="4" type="password" maxlength="3"><br>
+                   </p>
+                    <p>
+                        <h4>Choose card type</h4>
+                        <select name="typecard" type="text">
+                            <option value="Visa">Visa</option>
+                            <option value="Mastercard">Mastercard</option>
+                            <option value="AmericanExpress">American Express</option>
+                        </select> 
+                    </p>
+                    <br>
+                    <h3>Sign up</h3>
+                    Email Address: &nbsp;&nbsp;&nbsp;<input name="sign" size="20" type="text" maxlength="15"><br>
+                    Password: &nbsp;&nbsp;&nbsp;<input name="sign" size="30" type="password" maxlength="12"><br>
+                    <p>
+                    <h4>How did you hear about us?</h4>
+                        <input name="reach" type="checkbox">Social Media
+                        <input name="reach" type="checkbox">Search Engine
+                        <input name="reach" type="checkbox">Word of Mouth<br>
+                        <input name="reach" type="checkbox">Magazines
+                        <input name="reach" type="checkbox">Blog or Publication
+                        <input name="reach" type="checkbox">Other<br>
+                    </p>
+                    <input type="button" id="btn" value="submit"> 
+                    <input type="button" id="btn" value="Clear">
+                </form>
+            </div>
+         </div> 
+               
+          
+      
+
+     
+    </body>
+</html>

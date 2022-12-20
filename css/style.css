@@ -1,0 +1,79 @@
+/* navigation bar */
+div#nav{
+    background-color:lavenderblush;
+    display: flex;
+    }
+div#brand {
+    color: hotpink; 
+    font-size: 20px;
+
+}
+div#links{
+    margin-left: auto;
+    margin-top: 32px;
+    margin-bottom: 21.440px;
+}
+div#links a{
+    text-decoration: none;
+    margin-left:25px;
+    font-size: 30px;
+    color: black; /* pick default color*/
+}
+div#links a#last{
+    margin-right: 25px;
+}
+div#links a:hover{
+    color: hotpink;
+}
+
+
+/* main image and story */
+table#main{
+    margin-top: 20px;
+    margin-bottom: 0px;
+    margin-left: auto;
+    margin-right: auto;
+}
+table#main{
+    margin-left: 4%;
+}
+table#main td#pic img{
+    margin-right: auto; 
+    margin-left: auto; 
+    width:600px;  /* change width here  700*/
+    height: 400px;  /* change height here 400  */
+}
+td#text{
+    text-align: center; 
+    font-size: 20px; 
+}
+td#text p{
+    width: 70%;
+    margin-bottom: 0;
+    margin-top: 0;
+    margin-right: auto;
+    margin-left: auto;
+}
+
+
+/* programs cards */
+table#programs td{
+    text-align: center;
+    width: 30%; /* width of the cards including margin */
+}
+table#programs td p#text{
+    width: 80%; /* width of text inside card  */
+    padding-left: 10%; 
+    padding-right: 10%;
+}
+#text{font-size: 20px;
+}
+
+
+#info{text-align: center; margin-left: auto; margin-right: auto;
+}
+
+#info p{font-size: 20px;
+}
+#info img{width: 500px;
+}

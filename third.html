@@ -1,0 +1,360 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Welcome to Mina Fitness!</title>
+    <link rel="stylesheet" href="./css/third.css">
+    <script>
+        function doClear()//clearfunction
+        {
+            document.Application.lastname.value=""
+            document.Application.firstname.value=""
+            document.Application.address.value=""
+            document.Application.city.value=""
+            document.Application.state.value=""
+            document.Application.zip.value="";
+            document.Application.phone.value="";
+
+            document.Application.age[0].checked=false;
+            document.Application.age[1].checked=false;
+            document.Application.age[2].checked=false;
+            document.Application.age[3].checked=false;
+
+            document.Application.improve[0].checked=false;
+            document.Application.improve[1].checked=false;
+            document.Application.improve[2].checked=false;
+            document.Application.improve[3].checked=false;
+            document.Application.improve[4].checked=false;
+            document.Application.improve[5].checked=false;
+            return;
+        }
+        function validation() //validation for first form
+        {
+            var lastname = document.Application.lastname.value;
+            if (lastname=="")
+            {
+                alert("Please provide your Last name");
+                document.Application.lastname.focus();
+                return false;
+            }
+            if(!isNaN(lastname))//lastname and firstname character only 
+           {
+                alert("Please put character only for Last name");
+                document.Application.lastname.focus();
+                return false;
+            }
+            var firstname = document.Application.firstname.value;
+            if (firstname=="")
+            {
+                alert("Please provide your First name");
+                document.Application.firstname.focus();
+                return false;
+            }
+            if(!isNaN(firstname))
+            {
+                alert("Please put character only for First name");
+                document.Application.firstname.focus();
+                return false;
+            }
+            var address = document.Application.address.value;
+            if (address=="")
+            {
+                alert("Please provide your Address");
+                document.Application.address.focus();
+                return false;
+            }
+            if((address.length<10)||(address.length>20))// 10-20 letters allowed on address 
+            {
+                alert("Your Address must be 10 to 20 characters");
+                document.Application.address.focus();
+                return false;
+            }
+            var city = document.Application.city.value;
+            if (city=="")
+            {
+                alert("Please provide your City");
+                document.Application.city.focus();
+                return false;
+            }
+            var state = document.Application.state.value;
+            if (state=="")
+            {
+                alert("Please provide your State");
+                document.Application.state.focus();
+                return false;
+            }
+            var zip = document.Application.zip.value;//have to put 5 digits number
+            if ((zip=="")||(zip.length<5))
+            {
+                alert("Please provide your 5 digits number of Zip code");
+                document.Application.zip.focus();
+                return false;
+            }
+            else if (isNaN(zip))//number only for zipcode
+            {
+                alert("Please put number only for Zip code");
+                document.Application.zip.focus();
+                return false;
+            }
+            var phone = document.Application.phone.value;
+            if ((phone=="")||(phone.length<10))// 10 digit of phone number 
+            {
+                alert("Please provide your 10 digits number of phone number");
+                document.Application.phone.focus();
+                return false;
+            }
+            else if (isNaN(phone))//phone number should be a number only
+            {
+                alert("Please put number only for phone number");
+                document.Application.phone.focus();
+                return false;
+            }
+            var age=document.Application.age;
+            if ((age[0].checked==false) && (age[1].checked==false) && (age[2].checked==false)
+            && (age[3].checked==false))
+            {
+                alert ("Please provid your age");
+                return false;
+            }
+            var course = document.Application.course.value;
+            if (course=="selectCourse"){
+                alert("Please select the course");
+                document.Application.course.focus();
+                return false;
+            }
+             var improve=document.Application.improve;
+             if((improve[0].checked==false) &&(improve[1].checked==false) &&(improve[2].checked==false)
+             &&(improve[3].checked==false) && (improve[4].checked==false) &&(improve[5].checked==false))
+            {
+                alert ("please provide us what would you like to improve");
+                return false;
+            }
+                alert("Your form is submitted.");
+            return true;
+        }
+        
+        //second form
+        function onClear()//clearfunction
+        {
+            document.Payment.Namepay.value=""
+            document.Payment.cardNumber.value=""
+            document.Payment.date.value=""
+            document.Payment.Cvv.value=""
+            document.Payment.Email.value=""
+            document.Payment.password.value=""
+
+            document.Payment.reach[0].checked=false;
+            document.Payment.reach[1].checked=false;
+            document.Payment.reach[2].checked=false;
+            document.Payment.reach[3].checked=false;
+            document.Payment.reach[4].checked=false;
+            document.Payment.reach[5].checked=false;
+            return;
+        }
+        //second form validation
+        function onValidation()
+        {
+        var NamePay= document.Payment.Namepay.value;
+            if (NamePay=="")
+            {
+                alert("Please provide your name of cardholder");
+                document.Payment.Namepay.focus();
+                return false;
+            }
+            if (!isNaN(NamePay))//character only for name
+            {
+                alert("Please enter only characters for Name");
+                document.Payment.Namepay.focus();
+                return false;
+            }
+            var cardNumber= document.Payment.cardNumber.value;
+            if (cardNumber=="")
+            {
+                alert("Please provide your 16 digits of Card Number");
+                document.Payment.cardNumber.focus();
+                return false;
+            }
+            if (isNaN(cardNumber))//number only for card number
+            {
+                alert("Please put number only for Card Number");
+                document.Payment.cardNumber.focus();
+                return false;
+            }
+            if(cardNumber.length<16)
+            {
+                alert("Please provide your 16 digits of Card Number");
+                document.Payment.cardNumber.focus();
+                return false;
+            }
+            var exp= document.Payment.date.value;//expiration date either empty or less than 4 -> false 
+            if ((exp=="")||(exp.length<4))
+            {
+                alert("Please provide card 4 digits of Expiration Date");
+                document.Payment.date.focus();
+                return false;
+            }
+            if (isNaN(exp))//expiration date number only
+            {
+                alert("Please put number only for Expiration Date");
+                document.Payment.date.focus();
+                return false;
+            }
+            var cvv= document.Payment.cvv.value;//cvv either empyu or less than 3 -> false
+            if ((cvv=="")||(cvv.length<3))
+            {
+                alert("Please provide 3 digits of your card CVV");
+                document.Payment.cvv.focus();
+                return false;
+            }
+            if (isNaN(cvv))//cvv number only
+            {
+                alert("Please put number only for CVV number");
+                document.Payment.cvv.focus();
+                return false;
+            }
+            var cardtype = document.Payment.typecard.value;
+            if (cardtype=="selectcardtype"){
+                alert("Please select the card type");
+                document.Payment.typecard.focus();
+                return false;
+            }
+            var email= document.Payment.Email;
+            if (email.value=="")
+            {
+                alert("Please provide your Email Address");
+                document.Payment.Email.focus();
+                return false;
+            }
+            if(email.value.indexOf("@",0)<0)
+            {
+                alert("Please enter a valid Email Address.");
+                document.Payment.Email.focus();
+                return false;
+            }
+            if(email.value.indexOf(".",0)<0)
+            {
+                alert("Please enter a valid Email Address.");
+                document.Payment.Email.focus();
+                return false;
+            }
+            var password= document.Payment.password.value;
+            if (password=="")
+            {
+                alert("Please provide your Password");
+                document.Payment.password.focus();
+                return false;
+            }
+            if((password.length<4)||(password.length>10))//password must be 4 to 10 characters 
+            {
+                alert("Your Password must be 4 to 10 characters");
+                document.Payment.password.select();
+                return false;
+            }
+            var reach=document.Payment.reach;
+            if((reach[0].checked==false) &&(reach[1].checked==false) &&(reach[2].checked==false)
+            &&(reach[3].checked==false) && (reach[4].checked==false) &&(reach[5].checked==false))
+            {
+                alert ("Please check how did you hear about us");
+                return false;
+            }
+            alert("Your form is submitted.");
+            return true;
+        
+    }
+    </script>
+</head>
+
+<div id = "nav">
+    <div id = "brand">
+        <h1>Mina Fitness</h1>
+    </div>
+    <div id ="links">
+        <a href="index.html">Home</a>
+        <a href="second.html">Contact us</a>
+        <a href="third.html" id="last">Validation</a>
+    </div>
+</div>
+<!--first form starts-->
+<div id="section">
+    <div id="left">
+        <form name="Application" onsubmit="return(validation())" >
+            <h3>Application</h3>
+            <p>
+                Last Name: &nbsp;<input name="lastname" size="20" type="text" maxlength="10"><br>
+                First Name: &nbsp;<input name="firstname" size="30" type="text" maxlength="10"><br>
+                Address:&nbsp;<input name="address" size="40" type="text" maxlength="20"><br>
+                City: &nbsp;<input name="city" size="20" type="text" maxlength="10">
+                &nbsp;State: <input name="state" size="3" type="text" maxlength="2">
+                &nbsp; Zip: <input name="zip" size="5" type="text" maxlength="5"><br>
+                Phone: &nbsp;<input name="phone" size="30" type="text" maxlength="10"><br>
+            </p>
+            <p>
+            <h4>Select your Age</h4>
+            <input name="age" type="radio" value="18-26">18-26
+            <input name="age" type="radio" value="27-34">27-34
+            <input name="age" type="radio" value="35-42">35-42
+            <input name="age" type="radio" value="43-50">43-50 and more<br>
+
+            </p>
+            <p>
+            <h4>Select Course</h4>
+            <select name="course" type="text">
+                <option value ="selectCourse" selected>Select Course</option>
+                <option value="Pilates">Pilates</option>
+                <option value="FlyingYoga">Flying Yoga</option>
+                <option value="Zumba">Zumba</option>
+            </select>
+            </p>
+            <p>
+            <h4>What would you like to improve?</h4>
+            <input name="improve" type="checkbox">Posture
+            <input name="improve" type="checkbox">Cardio
+            <input name="improve" type="checkbox">Flexibility<br>
+            <input name="improve" type="checkbox">Diet
+            <input name="improve" type="checkbox">Coordination
+            <input name="improve" type="checkbox">Other<br>
+            </p>
+            <p>Comment:</p>
+            <textarea name="comments" id="" cols="30" rows="10"></textarea>
+            <br>
+            <input type="submit" id="btn" value="submit">
+            <input type="reset" id="btn" value="Clear" onclick="doClear()">
+        </form>
+    </div>
+    <!--second form-->
+    <div id="right">
+        <form name="Payment" onsubmit="return(onValidation())">
+            <h3>Payment</h3>
+            <p>
+                Name: &nbsp;&nbsp;&nbsp;<input name="Namepay" type="text" size="25" maxlength="20"><br>
+                Card Number: &nbsp;&nbsp;&nbsp;<input name="cardNumber" size="20" type="text" maxlength="16"><br>
+                Expiration Date: &nbsp;&nbsp;&nbsp;<input name="date" size="6" type="text" maxlength="4">
+                &nbsp;&nbsp;&nbsp;CVV: <input name="cvv" size="4" type="password" maxlength="3"><br>
+            </p>
+            <p>
+            <h4>Choose card type</h4>
+            <select name="typecard" type="text">
+                <option value="selectcardtype">Select card type</option>
+                <option value="Visa">Visa</option>
+                <option value="Mastercard">Mastercard</option>
+                <option value="AmericanExpress">American Express</option>
+            </select>
+            </p>
+            <br>
+            <h3>Sign up</h3>
+            Email Address: &nbsp;&nbsp;&nbsp;<input name="Email" size="20" type="text" maxlength="15"><br>
+            Password: &nbsp;&nbsp;&nbsp;<input name="password" size="30" type="password" maxlength="12"><br>
+            <p>
+            <h4>How did you hear about us?</h4>
+            <input name="reach" type="checkbox">Social Media
+            <input name="reach" type="checkbox">Search Engine
+            <input name="reach" type="checkbox">Word of Mouth<br>
+            <input name="reach" type="checkbox">Magazines
+            <input name="reach" type="checkbox">Blog or Publication
+            <input name="reach" type="checkbox">Other<br>
+            </p>
+            <input type="submit" id="btn" value="submit">
+            <input type="reset" id="btn" value="Clear" onClick="onClear()">
+        </form>
+    </div>
+</div>
+</html>

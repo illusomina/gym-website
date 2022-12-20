@@ -1,0 +1,94 @@
+/* navigation bar */
+div#nav{
+    background-color:lavenderblush;
+    display: flex;
+}
+div#brand {
+    color: hotpink; 
+    font-size: 20px;
+}
+div#links{
+    margin-left: auto;
+    margin-top: 32px;
+    margin-bottom: 21.440px;
+}
+div#links a{
+    text-decoration: none;
+    margin-left:25px;
+    font-size: 30px;
+    color: black; /* pick default color*/
+}
+div#links a#last{
+    margin-right: 25px;
+}
+div#links a:hover{
+    color: hotpink;
+}
+div#container{display:flex;
+    margin: 0;
+    margin-left: 10%;
+    margin-right: 10%;
+   
+}
+h3{font-size: 30px;
+}
+#program{padding:50px;
+    margin-top: 20px;
+    margin-bottom: 0;
+    margin-left: auto;
+    margin-right: auto;
+background-color: pink;
+width: 15%;
+}
+#program li{font-size: 20px;}
+#info{text-align: center; margin-left: auto; margin-right: auto;}
+
+#info p{font-size: 20px;}
+#info img{width: 500px;}
+input{margin-bottom: 20px;}
+
+ /* forms  */
+#section{
+    width: 100%;
+    display: flex;
+    margin-top: 100px;
+    margin-bottom: 100px;
+}
+#left{
+    width: 50%;
+    padding-left: auto;
+    padding-right: auto;
+    padding-top: 0;
+    padding-bottom: 0;
+    border-right: 5px solid pink;
+   
+}
+#right{
+    width: 50%;
+    padding-left: auto;
+    padding-right: auto;
+    padding-top: 0;
+    padding-bottom: 0;
+    border-left: 5px solid pink;}
+
+#section form{
+    margin: 0 auto;
+    width: 53%;
+}
+#section form h4{
+    font-size: 20px;
+}
+
+
+#btn{
+    width: 30%;
+}
+
+
+
+
+
+
+
+
+
